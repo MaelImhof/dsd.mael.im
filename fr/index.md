@@ -43,9 +43,10 @@ permalink: /fr/
 
 <h2 class="heading__toc">Leçons complémentaires</h2>
 <ul class="lessons-toc">
-  {% include toc-additional-lessons.html prefix="fr/language" %}
   {% include toc-additional-lessons.html prefix="fr/extra" %}
 </ul>
+<h2 class="heading__toc">Leçons Modelsim</h2>
+{% include toc-additional-lessons.html prefix="fr/language" %}
 
 
 ## Et ensuite?
