@@ -1,0 +1,20 @@
+<div class="language-switch">
+  <select class="language-switch__select" id="myList" onchange="switchlang(this);">
+    <!-- Loop over languages in _data/languages.yml -->
+    {%- for language in site.data.languages -%}
+      <!-- Checks page.lang not page path so top level files are en -->
+        {% assign lang = language.language-code %}
+        <option
+	  {% if lang == page.lang %}
+          selected
+          {% endif %}
+          value="{{lang}}">
+            {{ language.label-regional }}
+            <!-- Ensures the translation of English is not displayed -->
+            {% if lang != "en" %}
+              ({{language.label-english}})
+            {% endif %}
+        </option>
+    {%- endfor -%}
+  </select>
+</div>
