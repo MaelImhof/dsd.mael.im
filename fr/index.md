@@ -47,7 +47,7 @@ permalink: /fr/
 
 <h2 class="heading__toc">Astuces Générales</h2>
 <ul class=lessons-toc>
-  {% include toc-additional-lessons.html prefix="fr/general %}
+  {% include toc-additional-lessons.html prefix="fr/general" %}
 </ul>
 <h2 class="heading__toc">Astuces Logisim</h2>
 <ul class="lessons-toc">
