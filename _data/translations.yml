@@ -54,7 +54,12 @@ navigational-elements_open-an-issue:
 navigational-elements_page-source:
   en: "Page source"
   fr: "Source de la page"
-  ca: "Font de la pàgina"
+navigational-elements_suggest-an-idea:
+  en: "Suggest an idea"
+  fr: "Suggérer une idée"
+navigational-elements_contribute:
+  en: "Contribute on Github"
+  fr: "Contribuer via Github"
 navigational-elements_more:
   en: "More on this topic"
   fr: "Pour aller plus loin…"

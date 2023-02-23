@@ -1,13 +1,15 @@
 ---
 layout: "page"
 lang: "fr"
-title: Objectifs de LearnLaTeX
+title: Objectifs de Disaster Suppression Datasheet
 permalink: /fr/mission
 ---
 
-# Les objectifs de Learn LaTeX
+# Les objectifs de Disaster Suppression Datasheet
 
 
-Ce site web a pour but de vous aider à faire vos premiers pas avec LaTeX, un système de composition de documents conçu pour produire des documents de grande qualité. LaTeX peut faire un peu peur aux nouveaux utilisateurs car il ne ressemble pas à un traitement de texte, et parce qu'il n'est pas constitué d'un programme unique. Notre objectif est de vous aider à démarrer, sans forcément tout vous montrer d'un seul coup.
+Le cours de DSD est bon, mais manque parfois quelque peu d'aide concernant l'utilisation des logiciels et outils nécessaires pour les TPs et la pratique.
 
-Pour ce faire, nous avons pris 16 des concepts les plus importants dont vous aurez besoin, et nous les avons transformés en 16 courtes leçons. Chaque leçon est très ciblée, et ne devrait donc pas prendre trop de temps à suivre. Dans chaque leçon, nous avons donné des exemples de ce que vous pourriez avoir à écrire, et vous pourrez tester ces exemples directement en ligne. Pour en savoir plus sur [le fonctionnement des exemples, consultez l'aide](./help#examples).
+Ce site a été créé dans le but de recenser les conseils des élèves plus avancé·e·s ou déjà passé·e·s par le BA2, ainsi que les questions fréquemment posées et leurs réponses.
+
+Le but n'est **absolument pas de remplacer le cours**, mais de le compléter par des guides et tips&tricks pour les logiciels à notre disposition.
