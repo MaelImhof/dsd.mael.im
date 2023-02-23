@@ -26,31 +26,38 @@ permalink: /fr/
   </section>
   <section>
     <h3 class="text-columns__heading">Comment ça marche</h3>
-      <p>Nous avons pris les concepts les plus importants dont vous aurez besoin,
-         et nous en avons fait <em>16 courtes leçons</em>, qui ne vous demanderont
-         pas beaucoup de temps pour le suivre. Dans chaque leçon, nous proposons
-         beaucoup d'exemples de ce que vous pourriez avoir à écrire, et vous pouvez
-         modifier et tester ces exemples directement en ligne.
-         <a href="./help#examples">En savoir plus sur les exemples &hellip;</a></p>
+      <p>
+        Le site est organisé par catégorie : général, Logisim, Modelsim, Quartus. Chacune de ces catégories comportent plusieurs
+        pages qui recensent chacune une ou plusieurs astuces concernant une thématique donnée.
+      </p>
+      <p>
+        Le site <strong>ne remplace pas le cours</strong>, il le complète en apportant des tips.
+      </p>
+      <p>
+        Il est conseillé de lire au moins en diagonale tous les conseils concernant un des logiciels avant de commencer à l'utiliser,
+        cela peut te sauver un temps précieux. Concernant la section générale, elle comporte des tips sur le cours, les TPs notés et autres,
+        et peut être utile en tout temps.
+      </p>
+      <p>
+        Si tu as d'autres conseils que tu aimerais voir figurer sur ce site, tu peux <a href="https://github.com/MaelImhof/dsd.mael.im">contribuer au dépôt Github</a>,
+        les contributions sont acceptées avec plaisir !
+      </p>
   </section>
 </div>
 
-<h2 class="heading__toc" id="toc">Les leçons</h2>
-
-<p class="paragraph__toc">À la fin de chaque leçon, vous trouverez un lien <b>Pour aller plus loin</b>. Ces renseignements supplémentaires sont là pour vous aider si vous avez besoin de détails, mais ils ne doivent pas vous embarraser si vous n'en avez pas besoin.</p>
-
-{% include toc-lessons.html prefix="fr/lesson" %}
-
-<h2 class="heading__toc">Leçons complémentaires</h2>
-<ul class="lessons-toc">
-  {% include toc-additional-lessons.html prefix="fr/extra" %}
+<h2 class="heading__toc">Astuces Générales</h2>
+<ul class=lessons-toc>
+  {% include toc-additional-lessons.html prefix="fr/general %}
 </ul>
-<h2 class="heading__toc">Leçons Modelsim</h2>
+<h2 class="heading__toc">Astuces Logisim</h2>
 <ul class="lessons-toc">
-  {% include toc-additional-lessons.html prefix="fr/language" %}
+  {% include toc-additional-lessons.html prefix="fr/logisim" %}
 </ul>
-
-
-## Et ensuite?
-
-Nos leçons, très ciblées, ne sont pas censées couvrir tout ce dont vous aurez besoin sur LaTeX ; nous voulons seulement vous en donner suffisamment pour vous permettre de démarrer et de comprendre des exemples et des conseils que vous pourrez trouver ailleurs. La question de la recherche de documentation complémentaire est abordée [dans la dernière leçon](./lesson-16), mais la lecture d'un livre sur LaTeX reste sans doute le meilleur moyen d'en apprendre les détails. Nous vous donnons quelques recommandations [également dans la dernière leçon](./lesson-16).
+<h2 class="heading__toc">Astuces Modelsim</h2>
+<ul class="lessons-toc">
+  {% include toc-additional-lessons.html prefix="fr/modelsim" %}
+</ul>
+<h2 class="heading__toc">Astuces Quartus</h2>
+<ul class="lessons-toc">
+  {% include toc-additional-lessons.html prefix="fr/quartus" %}
+</ul>
