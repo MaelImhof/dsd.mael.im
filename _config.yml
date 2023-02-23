@@ -1,9 +1,12 @@
 # CONFIGURATION
 # https://jekyllrb.com/docs/configuration/options/
 
-title: learnlatex.org
-description: Learn LaTeX online
-repository: learnlatex/learnlatex.github.io
+# This code was completely yoinked from https://github.com/learnlatex/learnlatex.github.io, and
+# was then adapted to fit the needs of dsd.mael.im
+
+title: Disaster Suppression Datasheet
+description: Additional information about using Logisim, Modelsim and Quartus for the DSD course at EPFL
+repository: MaelImhof/dsd.mael.im
 
 plugins:
   - jekyll-sitemap

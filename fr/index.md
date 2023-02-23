@@ -1,25 +1,28 @@
 ---
 layout: "start"
 lang: "fr"
-title: "Apprenez LaTeX en ligne : cours gratuit pour débutant"
-description: "Apprenez LaTeX en 16 leçons pour débutants. Faites vos premiers pas avec LaTeX, un système de préparation de documents conçu pour produire des documents de grande qualité."
+title: "Tips and tricks pour DSD"
+description: "Astuces pour l'utilisation de Logisim, Modelsim et Quartus, et pour le cours de DSD en général"
 permalink: /fr/
 ---
 
-# Learn LaTeX
+# Disaster Suppression Datasheet
 
-<h2 class="heading__introduction">Faites vos premiers pas avec LaTeX, un système de préparation de documents conçu pour produire des documents de grande qualité.</h2>
+<h2 class="heading__introduction">Apprends quelques tips and tricks sur comment utiliser Logisim, Modelsim et Quartus</h2>
 
 <div
   class="text-columns">
   <section>
     <h3 class="text-columns__heading">Introduction</h3>
-    <p>LaTeX peut faire un peu peur aux nouveaux utilisateurs car il ne ressemble
-       <em>pas</em> à un traitement de texte, et parce qu'il n'est pas constitué
-       d'un programme unique. Notre objectif est de vous aider à vous familiariser
-       avec LaTeX : les bases, l'installation, l'écriture du code&hellip;  sans
-       forcément <em>tout</em> vous montrer d'un seul coup.
-       <a href="./mission">En savoir plus sur notre mission &hellip;</a></p>
+    <p>
+      En DSD, tu seras vite amené·e à utiliser les logiciels Logisim, Modelsim, Quartus, mais aussi à écrire en VHDL.
+      Pas de panique si ça te paraît encore être du chinois, suivant à quel point du cours tu lis cela, tu ne l'as peut-être
+      même pas encore vu.
+    </p>
+    <p>
+      Le but de ce site web est de te donner des petites astuces et des raccourcis dans l'utilisation de ces outils. En effet,
+      la plupart de ces astuces ne figurent pas dans le cours, ou du moins n'y figuraient pas l'année passée.
+    </p>
   </section>
   <section>
     <h3 class="text-columns__heading">Comment ça marche</h3>

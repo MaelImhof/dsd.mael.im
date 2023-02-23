@@ -1,8 +1,8 @@
 ---
 layout: "page"
 lang: "fr"
-title: "Utiliser le site learnlatex.org"
-description: "Cette page présente le site learnlatex.org lui-même et explique la meilleure façon de l'utiliser."
+title: "Utiliser le site dsd.mael.im"
+description: "Cette page présente le site dsd.mael.im lui-même et explique la meilleure façon de l'utiliser."
 permalink: /fr/help
 ---
 <script>
