@@ -3,6 +3,7 @@ description: Translate dsd.mael.im in a language it was not translated into yet
 title: "[Translation]: "
 labels: ["translation", "english"]
 assignees:
+  -
 body:
   - type: markdown
     attributes:
