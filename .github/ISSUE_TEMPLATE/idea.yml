@@ -20,7 +20,7 @@ body:
         - Improvement of the website in itself
         - Diversification of the website
         - None of the above
-    validation:
+    validations:
         required: true
   - type: textarea
     id: idea-details
