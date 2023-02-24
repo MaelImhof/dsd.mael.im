@@ -53,6 +53,10 @@ permalink: /fr/
 <ul class="lessons-toc">
   {% include toc-additional-lessons.html prefix="fr/logisim" %}
 </ul>
+<h2 class="heading__toc">Astuces VHDL</h2>
+<ul class="lessons-toc">
+  {% include toc-additional-lessons.html prefix="fr/vhdl" %}
+</ul>
 <h2 class="heading__toc">Astuces Modelsim</h2>
 <ul class="lessons-toc">
   {% include toc-additional-lessons.html prefix="fr/modelsim" %}
