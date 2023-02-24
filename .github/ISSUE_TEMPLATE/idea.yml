@@ -3,6 +3,7 @@ description: Suggest a new tip/info to add on the website, or any other type of 
 title: "[Idea]: "
 labels: ["idea"]
 assignees:
+  -
 body:
   - type: markdown
     attributes:
@@ -19,7 +20,7 @@ body:
         - Improvement of the website in itself
         - Diversification of the website
         - None of the above
-      validation:
+    validation:
         required: true
   - type: textarea
     id: idea-details
