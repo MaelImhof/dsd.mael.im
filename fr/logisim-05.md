@@ -1,12 +1,12 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Générer des circuits (Logisim)"
-description: "Logisim permet de générer automatiquement des circuits à partir d'une table de vérité"
-toc-anchor-text: "Générer des circuits"
-toc-description: "Génère des circuits à partir de table de vérité"
+title: "Splitter (Logisim)"
+description: "Le splitter nous sauve lorsqu'on travaille avec des inputs de plus de un bit"
+toc-anchor-text: "Splitter"
+toc-description: "Travaille aisément avec des inputs de n bits"
 ---
 
-# Générer des circuits (Logisim)
+# Splitter (Logisim)
 
 Placeholder
