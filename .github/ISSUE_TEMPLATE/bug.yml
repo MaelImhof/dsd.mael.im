@@ -1,0 +1,25 @@
+name: Bug report
+description: Report some bug that need to be fixed for UX
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  -
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the time you take to make this report! We'll try to fix it as fast as possible.
+  - type: input
+    id: tldr
+    attributes:
+      label: TLDR
+      description: Can you explain in a short way what happened/happens that worsens the UX?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Please provide useful details to reproduce the issue/fix and debug it
+    validations:
+      required: true
