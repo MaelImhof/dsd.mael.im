@@ -49,12 +49,6 @@ defaults:
       lang: "en"
   -
     scope:
-      path: "en"
-    values:
-      lang: "en"
-      label: "English"
-  -
-    scope:
       path: "fr"
     values:
       lang: "fr"
