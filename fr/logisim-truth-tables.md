@@ -6,7 +6,6 @@ description: "Logisim permet de générer automatiquement des circuits à partir
 toc-anchor-text: "Générer des circuits"
 toc-description: "Génère des circuits à partir de table de vérité"
 next: "logisim-04"
-lesson-number: 1
 ---
 
 # Générer des circuits (Logisim)

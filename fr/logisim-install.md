@@ -6,7 +6,6 @@ description: "Explication détaillée de l'installation de Logisim avec les ques
 toc-anchor-text: "Installer Logisim"
 toc-description: "Installation de Logisim et questions/problèmes fréquents"
 next: "logisim-02"
-lesson-number: 4
 ---
 
 # Installer Logisim
