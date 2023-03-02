@@ -11,7 +11,7 @@ toc-description: "Installation de Logisim et questions/problèmes fréquents"
 
 Tu vas avoir besoin de plusieurs logiciels pour travailler en DSD, l'un d'entre eux est **Logisim**. C'est le premier dont tu te serviras, et de loin le plus simple à installer.
 
-> Avant de commencer, note que sauf erreur, **Logisim est déjà installé sur les machines de l'EPFL**. Une solution peut donc être d'utiliser ces machines, auquel cas tu devrais signaler que c'est ton attention en remplissant le sondage pour les TPs de DSD.
+> Avant de commencer, note que sauf erreur, **Logisim est déjà installé sur les machines de l'EPFL**. Une solution peut donc être d'utiliser ces machines, ~~auquel cas tu devrais signaler que c'est ton intention en remplissant le sondage pour les TPs de DSD~~ (le sondage est à présent fermé)
 
 ## Installer Logisim sur sa propre machine
 
