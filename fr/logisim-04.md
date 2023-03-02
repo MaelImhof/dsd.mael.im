@@ -1,62 +1,80 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Propriétés des blocs Logisim"
-description: "Se simplifier la vie en apprenant à maîtriser les propriétés des portes AND, OR, etc..."
-toc-anchor-text: "Propriétés Logisim"
-toc-description: "Apprendre à maîtriser l'onglet \"Properties\" de Logisim"
+title: "Générer des circuits (Logisim)"
+description: "Logisim permet de générer automatiquement des circuits à partir d'une table de vérité"
+toc-anchor-text: "Générer des circuits"
+toc-description: "Génère des circuits à partir de table de vérité"
 ---
 
-# Propriétés des blocs Logisim
+# Générer des circuits (Logisim)
 
-Dans Logisim, on travaille avec des objets. Par exemple, une porte AND et un objet. Un input en est un autre.
+Dans certains cas, les circuits à créer sont longs à créer à la main et plus simple à générer automatiquement.
 
-**Ces objets ont des propriétés** qui te permettent de mieux expliquer à Logisim ce que tu attends et de te simplifier la vie pour des opérations plus complexes.
+Il est en effet possible de demander à Logisim de **générer automatiquement des circuits à partir de tables de vérité** (*truth table*).
 
-## Exemple 1 : la porte AND à 24 entrées
+## Exemple d'utilisation
 
-Tu as 24 valeurs en entrée et tu aimerais vérifier qu'elles soient toutes à 1? Qu'à cela ne tienne, grâce aux propriétés de la porte AND, tu peux réaliser cela sans problème !
+Supposons pour cet exemple qu'on souhaite à nouveau créer un additionneur de bits. On a alors deux bits en entrée, `A` et `B`, ainsi qu'un `carry`. En sortie, on demande le résultat de l'addition ainsi qu'un éventuel `remainder`.
 
-> On s'accordera cependant sur le fait que ça risque peu de t'arriver durant le cours lul
+Sauf que cette fois-ci, on va générer le circuit automatiquement grâce à une table de vérité.
 
-Crée une porte AND dans ton projet de manière normale, puis sélectionne-la avec l'outil curseur. Tu peux à présent accéder aux propriétés de l'objet en bas à gauche :
+Pour cela, rends-toi dans le menu de Logisim en haut à gauche, sous `Fenêtre` > `Analyse combinatoire`.
 
-![L'image des propriétés d'une porte AND devrait s'afficher ici](assets/images/logisim-04-and-gate-properties.png)
+![L'image du menu à ouvrir devrait apparaître ici](assets/images/logisim-truth-tables-combinational-analysis-menu-item.png)
 
-Si tu passes `Nombre d'entrées` à 24, la porte AND s'adaptera automatiquement pour accueillir 24 variables d'entrée et vérifier qu'elles soient toutes à 1.
+Tu devrais alors voir une fenêtre comme la suivante apparaître.
 
-![L'image des propriétés d'une porte AND de 24 entrées devrait s'afficher ici](assets/images/logisim-04-and-gate-properties-with-24-inputs.png)
+![L'image de la fenêtre en question devrait apparaître ici](assets/images/logisim-truth-tables-combinational-analysis-inputs-and-outputs-tab.png)
 
-Remarque que pour chaque entrée, tu peux définir si tu désires inverser la valeur de l'entrée ou non, grâce à `Inverseur i` avec `i` le numéro de l'entrée. Cela peut t'éviter d'utiliser de nombreuses portes NOT par exemple.
+### Lister les variables
 
-## Exemple 2 : Créer des vecteurs de bits
+Dans ce premier onglet `Entrées et sorties`, tu vas pouvoir lister tes variables... d'entrée et de sortie, comme les tables de vérité vues en cours.
 
-Après quelques semaines de cours, tu utiliseras des vecteurs de bits, c'est-à-dire des valeurs qui font plus d'un bit. Par exemple `01101011`. Tu peux créer de tels entrées de la manière suivante.
+Pour notre circuit d'exemple, on a `A`, `B`, `carry` en entrée et `result`, `remainder` en sortie, comme ceci :
 
-1) Crée une entrée (*input*) normalement
+![L'image de la liste des entrées et sorties remplies devrait apparaître ici](assets/images/logisim-truth-tables-combinational-analysis-inputs-and-outputs-tab-filled-in.png)
 
-2) Dans les propriétés de ton input, modifie l'attribut `Largeur données`. Si par exemple tu mets cette valeur à `8`, ton entrée comptera 8 bits au lieu de 1. Elle s'affichera aussi différemment : ![L'image d'une entrée de 8 bits devrait s'afficher ici](assets/images/logisim-04-input-properties-8-bits.png)
+### Compléter la table de vérité
 
-Tu peux toujous modifier la valeur de cette entrée de la même manière qu'une entrée normale, avec l'outil représentant une main, et en cliquant sur le bit que tu désires changer.
+Passons maintenant à l'onglet suivant, `Table`, et remplissons la table de vérité avec les résultats désirés.
 
-> Le processus est strictement le même si tu as besoin d'une sortie (*output*) de plusieurs bits au lieu d'un seul
+Par exemple, si `A` et `B` sont tous deux 1, alors on aura un 0 en `result` et un 1 en `remainder`.
 
-Les vecteurs de bits seront abordés plus en détails dans les [astuces sur les *Splitters*](logisim-05).
+On remplit ainsi chaque ligne de la table. Note qu'il est possible de laisser un "-" dans le cas d'un *don't care*, si on s'en fiche de l'output dans ce cas-là. Cela rend le remplissage plus simple.
 
-## Exemple 3 : Utiliser une porte AND sur des vecteurs de bits
+On obtient ainsi notre table :
 
-Mettons que tu as **deux vecteurs de bits, et que tu aimerais effectuer une opération bit à bit** (on prend les deux premiers bits des deux vecteurs, et on effectue l'opération avec eux, puis les deux deuxièmes bits, etc...).
+![L'image de la table complétée devrait apparaître ici](assets/images/logisim-truth-tables-combinational-analysis-table-tab-filled-in.png)
 
-Par exemple réalisons une opération AND bit à bit. Pour cela, crée deux entrées de 4 bits chacune, et une sortie de 4 bits également.
+### Expression et *Karnaugh diagram*
 
-Le bit 0 de la sortie représentera le résultat de la porte AND sur les deux bits 0 des deux vecteurs d'entrée, etc...
+Une fois la table complétée, Logisim génère pour nous l'expression logique correspondant à la table de vérité qu'on lui a donnée dans l'onglet `Expression`.
 
-Crée ensuite une porte AND (une seule). Sélectionne-la, et dans ses propriétés, modifie `Largeur données` à 4. Cela signifie que **la porte AND prendra des vecteurs de 4 bits en entrée et effectuera une opération bit à bit**, avant de donner en sortie un vecteur de 4 bits contenant chacun des résultats, comme dans cet exemple :
+![L'image de l'expression générée automatiquement devrait apparaître ici](assets/images/logisim-truth-tables-combinational-analysis-expression-tab.png)
 
-![L'image d'une porte AND prenant des vecteurs de 4 bits en entrée devrait s'afficher ici](assets/images/logisim-04-and-gate-with-4-bits-inputs.png)
+Logisim génère également le *Karnaugh diagram* correspondant à l'expression et trouve une expression minimisée pour la décrire, dans l'onglet `Karnaugh`.
 
-Tu peux également combiner les exemples 1 et 3 pour créer une porte AND avec 5 inputs de 8 bits chacun, par exemple.
+### Générer le circuit
 
-## Projet Logisim
+Une fois toutes ces données obtenues, Logisim est capable de générer le circuit. Pour ceci, appuie sur le bouton `Construire le circuit` en bas à gauche de la fenêtre d'analyse combinatoire.
 
-Le projet utilisé pour imager ce tutoriel peut être téléchargé via [ce lien](/assets/logisim/projects/logisim_04_use_object_properties.circ).
+Tu pourras alors définir différents paramètres comme le projet de destination, le nom du circuit ou encore certaines contraintes sur le circuit à générer. Tu peux tester toutes ces possibilités par toi-même en téléchargeant le projet et la table de vérité utilisés dans cet exemple, les liens sont plus bas.
+
+![L'image des paramètres de génération de circuit devrait s'afficher ici](assets/images/logisim-truth-tables-combinational-analysis-build-circuit.png)
+
+Le circuit sera alors généré selon les contraintes données. Sans donner de contrainte particulière, voilà le circuit généré :
+
+![L'image du circuit généré automatiquement devrait apparaître ici](assets/images/logisim-truth-tables-combinational-analysis-built-circuit.png)
+
+## Autres possibilités - importer et exporter les tables de vérité
+
+Comme tu l'as probablement remarqué, à côté du bouton `Construire le circuit` se trouvent des boutons d'importation et d'exportation de la table de vérité. Cela te permet de remplir la table plus simplement si tu as déjà un fichier texte contenant la table sous la main.
+
+Par exemple, tu peux utiliser cette fonctionnalité pour importer la table de vérité utilisée dans cet exemple sans avoir à la recopier (même si c'est pas très compliqué, ça c'est sûr).
+
+## Projet Logisim et table de vérité
+
+Le projet Logisim utilisé dans l'exemple ci-dessus est téléchargeable via <a href="/assets/logisim/projects/logisim_truth_tables_generate_circuits_with_truth_tables.circ" download="logisim_truth_tables_generate_circuits_with_truth_tables.circ">ce lien</a>.
+
+La table de vérité utilisée peut quant à elle être téléchargée via <a href="/assets/logisim/truth-tables/logisim-truth-tables-generate-circuits-with-truth-tables.txt" download="logisim-truth-tables-generate-circuits-with-truth-tables.txt">ce lien</a>.

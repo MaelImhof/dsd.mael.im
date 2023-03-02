@@ -5,7 +5,6 @@ title: "Télécharger et installer Logisim"
 description: "Explication détaillée de l'installation de Logisim avec les questions les plus fréquemment posées"
 toc-anchor-text: "Installer Logisim"
 toc-description: "Installation de Logisim et questions/problèmes fréquents"
-next: "logisim-02"
 ---
 
 # Installer Logisim
@@ -20,7 +19,7 @@ Si tu souhaites travailler sur ta propre machine, rends-toi sur la [page d'insta
 
 Au bas de cette page, tu devrais trouver une liste des différents installeurs disponibles :
 
-![`Une image de la liste devrait apparaître ici`](./assets/images/logisim-01-installers-list.png)
+![`Une image de la liste devrait apparaître ici`](./assets/images/logisim-installation-installers-list.png)
 
 Ici, tu devras **choisir le bon installeur** dépendamment de ton OS.
 

@@ -1,81 +1,60 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Générer des circuits (Logisim)"
-description: "Logisim permet de générer automatiquement des circuits à partir d'une table de vérité"
-toc-anchor-text: "Générer des circuits"
-toc-description: "Génère des circuits à partir de table de vérité"
-next: "logisim-04"
+title: "Organiser ses câbles (Logisim)"
+description: "Un projet Logisim peut devenir chaotique si on ne fait pas attention"
+toc-anchor-text: "Organiser ses câbles"
+toc-description: "Garde tes projets Logisim propres et lisibles"
 ---
 
-# Générer des circuits (Logisim)
+# Organiser ses câbles (Logisim)
 
-Dans certains cas, les circuits à créer sont longs à créer à la main et plus simple à générer automatiquement.
+Durant les TPs de DSD, du moins la première partie du semestre, tu utiliseras Logisim afin de créer et simuler des circuits.
 
-Il est en effet possible de demander à Logisim de **générer automatiquement des circuits à partir de tables de vérité** (*truth table*).
+Ces **circuits deviendront progressivement plus complexes**, et il y a quelques petites astuces pour garder des circuits lisibles et compréhensibles d'un coup d'oeil. L'une d'entre elles t'es présentée ici, l'autre, un peu plus avancée, se trouve [plus loin dans les astuces (sous-circuit et modularité)](logisim-08.md).
 
-## Exemple d'utilisation
+Pour commencer, cela dit, organiser tes câbles correctement devrait suffire.
 
-Supposons pour cet exemple qu'on souhaite à nouveau créer un additionneur de bits. On a alors deux bits en entrée, `A` et `B`, ainsi qu'un `carry`. En sortie, on demande le résultat de l'addition ainsi qu'un éventuel `remainder`.
+## Mise en situation
 
-Sauf que cette fois-ci, on va générer le circuit automatiquement grâce à une table de vérité.
+**Supposons qu'on désire créer un additionneur de bits** tout simple. On a deux bits en entrée, A et B, qui sont 1 ou 0, et un `carry` qui pourrait provenir d'une addition précédente en cas d'addition bit par bit. Le circuit donne en sortie le résultat de l'addition ainsi que le remainder de l'addition qui a été effectuée.
 
-Pour cela, rends-toi dans le menu de Logisim en haut à gauche, sous `Fenêtre` > `Analyse combinatoire`.
+Voici une implémentation possible :
 
-![L'image du menu à ouvrir devrait apparaître ici](assets/images/logisim-03-combinational-analysis-menu-item.png)
+![L'image d'un circuit chaotique devrait apparaître ici](assets/images/logisim-cables-chaotic-circuit.png)
 
-Tu devrais alors voir une fenêtre comme la suivante apparaître.
+> Remarque que des portes AND et XOR à **trois entrées** sont utilisées. Pas de panique, cette possibilité et d'autres encore sont explorées [plus loin sur ce site](logisim-05.md). Pour l'instant, concentrons-nous sur la lisibilité du circuit.
 
-![L'image de la fenêtre en question devrait apparaître ici](assets/images/logisim-03-combinational-analysis-inputs-and-outputs-tab.png)
+Le circuit est encore relativement simple, il est donc possible de comprendre ce qu'il fait avec de la patience et de la concentration... Mais on aimerait que ce soit encore plus **simple de comprendre ce que le circuit fait d'un coup d'oeil**.
 
-### Lister les variables
+## Introducing organisation des câbles
 
-Dans ce premier onglet `Entrées et sorties`, tu vas pouvoir lister tes variables... d'entrée et de sortie, comme les tables de vérité vues en cours.
+Une manière de rendre le circuit
 
-Pour notre circuit d'exemple, on a `A`, `B`, `carry` en entrée et `result`, `remainder` en sortie, comme ceci :
+ - Plus lisible
+ - Plus joli et aéré (oui c'est important, le style avant tout)
+ - Plus facilement extensible et/ou modifiable
 
-![L'image de la liste des entrées et sorties remplies devrait apparaître ici](assets/images/logisim-03-combinational-analysis-inputs-and-outputs-tab-filled-in.png)
+est simplement de réarranger les câbles (ou de les arranger dès la création du projet) d'une manière intelligente et logique. Les circuits exemples du professeur ou d'autres circuits qu'on peut trouver sur le net utilisent la méthode suivante :
 
-### Compléter la table de vérité
+![L'image d'un circuit ordonné devrait apparaître ici](assets/images/logisim-cables-sorted-circuit.png)
 
-Passons maintenant à l'onglet suivant, `Table`, et remplissons la table de vérité avec les résultats désirés.
+En arrangeant les inputs sur ces lignes de câbles, on voit facilement d'un coup d'oeil quel input est utilisé (puisqu'ils sont dans un ordre établi) et s'il s'agit de l'input ou de sa négation.
 
-Par exemple, si `A` et `B` sont tous deux 1, alors on aura un 0 en `result` et un 1 en `remainder`.
+Il est donc recommandé d'utiliser cette méthode pour organiser son projet. Ça peut paraître inutile sur un petit circuit comme celui-ci, mais n'oublie pas que **les projets vont devenir plus complexes**, et c'est plus sympa si tu peux les relire facilement.
 
-On remplit ainsi chaque ligne de la table. Note qu'il est possible de laisser un "-" dans le cas d'un *don't care*, si on s'en fiche de l'output dans ce cas-là. Cela rend le remplissage plus simple.
+Même pour des projets simples, c'est toujours agréable de les organiser comme ceci. De plus, il faut prendre les bonnes habitudes dès le départ ;)
 
-On obtient ainsi notre table :
+## Erreur de câblage
 
-![L'image de la table complétée devrait apparaître ici](assets/images/logisim-03-combinational-analysis-table-tab-filled-in.png)
+Une erreur très spécifique peut être rencontrée si on ne fait pas attention, comme ci-dessous :
 
-### Expression et *Karnaugh diagram*
+![L'image d'un circuit ordonné avec une erreur devrait apparaître ici](assets/images/logisim-cables-sorted-circuit-with-error.png)
 
-Une fois la table complétée, Logisim génère pour nous l'expression logique correspondant à la table de vérité qu'on lui a donnée dans l'onglet `Expression`.
+L'erreur ici est due au fait que le câble qui relie la deuxième porte XOR à la deuxième porte OR **passe par les bouts des trois câbles des négations des inputs**. Lorsqu'un câble passe par le bout d'un autre câble, les deux se lient automatiquement.
 
-![L'image de l'expression générée automatiquement devrait apparaître ici](assets/images/logisim-03-combinational-analysis-expression-tab.png)
+La solution à ceci est simple : prolonge tes câbles vers le bas de quelques points de plus, afin de déplacer le bout plus bas et de pouvoir passer tes câbles sans problème.
 
-Logisim génère également le *Karnaugh diagram* correspondant à l'expression et trouve une expression minimisée pour la décrire, dans l'onglet `Karnaugh`.
+## Projet Logisim
 
-### Générer le circuit
-
-Une fois toutes ces données obtenues, Logisim est capable de générer le circuit. Pour ceci, appuie sur le bouton `Construire le circuit` en bas à gauche de la fenêtre d'analyse combinatoire.
-
-Tu pourras alors définir différents paramètres comme le projet de destination, le nom du circuit ou encore certaines contraintes sur le circuit à générer. Tu peux tester toutes ces possibilités par toi-même en téléchargeant le projet et la table de vérité utilisés dans cet exemple, les liens sont plus bas.
-
-![L'image des paramètres de génération de circuit devrait s'afficher ici](assets/images/logisim-03-combinational-analysis-build-circuit.png)
-
-Le circuit sera alors généré selon les contraintes données. Sans donner de contrainte particulière, voilà le circuit généré :
-
-![L'image du circuit généré automatiquement devrait apparaître ici](assets/images/logisim-03-combinational-analysis-built-circuit.png)
-
-## Autres possibilités - importer et exporter les tables de vérité
-
-Comme tu l'as probablement remarqué, à côté du bouton `Construire le circuit` se trouvent des boutons d'importation et d'exportation de la table de vérité. Cela te permet de remplir la table plus simplement si tu as déjà un fichier texte contenant la table sous la main.
-
-Par exemple, tu peux utiliser cette fonctionnalité pour importer la table de vérité utilisée dans cet exemple sans avoir à la recopier (même si c'est pas très compliqué, ça c'est sûr).
-
-## Projet Logisim et table de vérité
-
-Le projet Logisim utilisé dans l'exemple ci-dessus est téléchargeable via <a href="/assets/logisim/projects/logisim_03_generate_circuits_with_truth_tables.circ" download="logisim_03_generate_circuits_with_truth_tables.circ">ce lien</a>.
-
-La table de vérité utilisée peut quant à elle être téléchargée via <a href="/assets/logisim/truth-tables/logisim-03-generate-circuits-with-truth-tables.txt" download="logisim-03-generate-circuits-with-truth-tables.txt">ce lien</a>.
+Si tu désires consulter le projet Logisim duquel proviennent les captures d'écrans de circuits utilisées sur cette page, tu peux <a type="button" href="/assets/logisim/projects/logisim_cables_chaotic_addition_circuit.circ" download="logisim_cables_chaotic_addition_circuit.circ">télécharger le fichier .circ ici</a>

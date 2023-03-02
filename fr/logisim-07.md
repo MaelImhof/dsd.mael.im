@@ -1,12 +1,12 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Maîtriser les sous-circuits (Logisim)"
-description: "Pour organiser ton projet, le diviser en sous-circuits peut s'avérer utile"
-toc-anchor-text: "Maîtriser les sous-circuits"
-toc-description: "Divise ton gros projets en petits sous-circuits simples"
+title: "Activer/Désactiver les clocks (Logisim)"
+description: "Envie de paix pour travailler? Désactive les clocks quand tu modifies ton circuit"
+toc-anchor-text: "Activer/Désactiver les clocks"
+toc-description: "Travaille en paix avec les clocks désactivées lorsque tu ne testes pas"
 ---
 
-# Maîtriser les sous-circuits (Logisim)
+# Activer/Désactiver les clocks (Logisim)
 
 Placeholder

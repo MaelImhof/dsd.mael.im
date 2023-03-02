@@ -1,89 +1,62 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Splitter (Logisim)"
-description: "Le splitter nous sauve lorsqu'on travaille avec des inputs de plus de un bit"
-toc-anchor-text: "Splitter"
-toc-description: "Travaille aisément avec des inputs de n bits"
+title: "Propriétés des blocs Logisim"
+description: "Se simplifier la vie en apprenant à maîtriser les propriétés des portes AND, OR, etc..."
+toc-anchor-text: "Propriétés Logisim"
+toc-description: "Apprendre à maîtriser l'onglet \"Properties\" de Logisim"
 ---
 
-# Splitter (Logisim)
+# Propriétés des blocs Logisim
 
-Comme déjà abordé dans le [tutoriel précédent](logisim-04), tu auras rapidement besoin de travailler avec des vecteurs de bits plutôt que des bits individuels.
+Dans Logisim, on travaille avec des objets. Par exemple, une porte AND et un objet. Un input en est un autre.
 
-Tu auras donc des entrées qui ressembleront plutôt à ceci :
+**Ces objets ont des propriétés** qui te permettent de mieux expliquer à Logisim ce que tu attends et de te simplifier la vie pour des opérations plus complexes.
 
-![L'image d'une entrée de 8 bits devrait s'afficher ici](assets/images/logisim-05-input-of-8-bits.png)
+## Exemple 1 : la porte AND à 24 entrées
 
-Mais il arrivera que tu aies besoin d'effectuer une opération sur un bit bien précis de ce vecteur, ou deux bits précis, bref, que tu désires isoler certains bits.
+Tu as 24 valeurs en entrée et tu aimerais vérifier qu'elles soient toutes à 1? Qu'à cela ne tienne, grâce aux propriétés de la porte AND, tu peux réaliser cela sans problème !
 
-**Isoler certains bits se fait grâce au Splitter**, que nous allons appréhender plus en détails dans ce tutoriel.
+> On s'accordera cependant sur le fait que ça risque peu de t'arriver durant le cours lul
 
-## Ajouter un Splitter à ton circuit
+Crée une porte AND dans ton projet de manière normale, puis sélectionne-la avec l'outil curseur. Tu peux à présent accéder aux propriétés de l'objet en bas à gauche :
 
-Pour ajouter un Splitter, rends-toi dans l'onglet `Conception` de Logisim en haut à droite, puis dans le dossier intitulé `Câblage`, tu trouveras un élément appelé `Répartiteur (Splitter)`. En le sélectionnant, comme ci-dessous, tu pourras l'ajouter à ton circuit de la même manière qu'une porte AND.
+![L'image des propriétés d'une porte AND devrait s'afficher ici](assets/images/logisim-blocks-and-gate-properties.png)
 
-![L'image de l'emplacement où trouver le Splitter dans les outils devrait s'afficher ici](assets/images/logisim-05-add-splitter.png)
+Si tu passes `Nombre d'entrées` à 24, la porte AND s'adaptera automatiquement pour accueillir 24 variables d'entrée et vérifier qu'elles soient toutes à 1.
 
-> Note : dans la suite de ce tutoriel, nous nous référerons à cet outil comme un Splitter et non pas un Répartiteur
+![L'image des propriétés d'une porte AND de 24 entrées devrait s'afficher ici](assets/images/logisim-blocks-and-gate-properties-with-24-inputs.png)
 
-## Modifier et utiliser le Splitter
+Remarque que pour chaque entrée, tu peux définir si tu désires inverser la valeur de l'entrée ou non, grâce à `Inverseur i` avec `i` le numéro de l'entrée. Cela peut t'éviter d'utiliser de nombreuses portes NOT par exemple.
 
-Par défaut, le Splitter ajouté ressemblera probablement à quelque chose comme ça :
+## Exemple 2 : Créer des vecteurs de bits
 
-![L'image du Splitter par défaut devrait s'afficher ici](assets/images/logisim-05-default-splitter.png)
+Après quelques semaines de cours, tu utiliseras des vecteurs de bits, c'est-à-dire des valeurs qui font plus d'un bit. Par exemple `01101011`. Tu peux créer de tels entrées de la manière suivante.
 
-Comme tu peux aisément le constater, on a une entrée de 8 bits qui est donnée à un splitter qui supporte 2 bits.
+1) Crée une entrée (*input*) normalement
 
-Pour résoudre ce problème, on va sélectionner le Splitter et aller dans ses propriétés.
+2) Dans les propriétés de ton input, modifie l'attribut `Largeur données`. Si par exemple tu mets cette valeur à `8`, ton entrée comptera 8 bits au lieu de 1. Elle s'affichera aussi différemment : ![L'image d'une entrée de 8 bits devrait s'afficher ici](assets/images/logisim-blocks-input-properties-8-bits.png)
 
-Un Splitter possède plusieurs propriétés spécifiques qui vont nous intéresser :
+Tu peux toujous modifier la valeur de cette entrée de la même manière qu'une entrée normale, avec l'outil représentant une main, et en cliquant sur le bit que tu désires changer.
 
- - **`Nbr Terminaisons`** (En anglais `Fan Out`) : indique le nombre de fils sortant du Splitter. Par exemple, si on entre 8 comme valeur : ![L'image d'un Splitter à 8 sorties devrait s'afficher ici](assets/images/logisim-05-splitter-properties-fan-out.png)
- - **`Largeur faisceau`** (En anglais `Bit Width In`) : indique le nombre de bits pris en entrée par le Splitter. Par exemple, si je définis cette valeur à 4 : ![L'image d'un Splitter prenant 4 bits en entrées devrait s'afficher ici](assets/images/logisim-05-splitter-properties-bit-width-in.png)
- - **`Bit i`** : Pour le ième bit d'entrée, indique dans quel bit de sortie la valeur doit aller. Cette propriété est expliquée ci-dessous à coups d'exemples
- - **`Espacement`** (`Spacing` en anglais) : indique combien de points séparent chaque fil de sortie du suivant. Par défaut, la valeur est de 1, et si on la modifie les fils de sortie s'espacent plus. Par exemple, avec une valeur de 2 : ![L'image d'un Splitter avec espacement de 2 devrait s'afficher ici](assets/images/logisim-05-splitter-properties-spacing.png)
+> Le processus est strictement le même si tu as besoin d'une sortie (*output*) de plusieurs bits au lieu d'un seul
 
-Tu l'auras compris, pour résoudre notre problème, on modifie la valeur de `Largeur Faisceau` (*`Bit Width In`*) à 8 pour faire correspondre l'entrée à la valeur donnée, ainsi l'erreur disparaît.
+Les vecteurs de bits seront abordés plus en détails dans les [astuces sur les *Splitters*](logisim-06).
 
-## Séparer les bits comme un·e pro
+## Exemple 3 : Utiliser une porte AND sur des vecteurs de bits
 
-### Exemple 1 : séparer chaque bit
+Mettons que tu as **deux vecteurs de bits, et que tu aimerais effectuer une opération bit à bit** (on prend les deux premiers bits des deux vecteurs, et on effectue l'opération avec eux, puis les deux deuxièmes bits, etc...).
 
-Si tu désire travailler avec chaque bit du vecteur séparemment, fais correspondre le nombre de bits en entrée avec le nombre de bits de sortie, et le Splitter donnera automatiquement un bit du vecteur pour chaque bit de sortie, comme ceci :
+Par exemple réalisons une opération AND bit à bit. Pour cela, crée deux entrées de 4 bits chacune, et une sortie de 4 bits également.
 
-![Une image de Splitter basique devrait apparaître ici](assets/images/logisim-05-splitter-example-basic.png)
+Le bit 0 de la sortie représentera le résultat de la porte AND sur les deux bits 0 des deux vecteurs d'entrée, etc...
 
-Grâce à la propriété `Bit i`, on peut modifier quel bit est exporté dans quelle sortie. Par exemple, si je désire garder le dernière sortie vide et avoir les bits d'entrée 6 et 7 dans l'avant-dernière sortie, je peux modifier la propriété `Bit 7` et lui dire de s'exporter dans la sortie 7 :
+Crée ensuite une porte AND (une seule). Sélectionne-la, et dans ses propriétés, modifie `Largeur données` à 4. Cela signifie que **la porte AND prendra des vecteurs de 4 bits en entrée et effectuera une opération bit à bit**, avant de donner en sortie un vecteur de 4 bits contenant chacun des résultats, comme dans cet exemple :
 
-![Une image de Splitter basique avec deux bits sur la sortie 7 devrait apparaître ici](assets/images/logisim-05-splitter-example-basic-with-one-bits-vector.png)
+![L'image d'une porte AND prenant des vecteurs de 4 bits en entrée devrait s'afficher ici](assets/images/logisim-blocks-and-gate-with-4-bits-inputs.png)
 
-> Remarque que sous chaque bit de sortie sont écrit les bits qui sont exportés dans cette sortie. Par exemple, la première sortie donne la valeur du bit 0, ou l'avant dernière donne les valeurs des bits 7 à 6
+Tu peux également combiner les exemples 1 et 3 pour créer une porte AND avec 5 inputs de 8 bits chacun, par exemple.
 
-### Exemple 2 : Obtenir un bit bien précis
+## Projet Logisim
 
-Supposons qu'on désire uniquement connaître la valeur d'un des bits d'entrée. Rien de plus simple. Voici une configuration qui ne donne en sortie que le bit 0 du vecteur d'entrée :
-
-![L'image d'un Splitter qui ne donne en sortie que le bit 0 d'entrée devrait s'afficher ici](assets/images/logisim-05-splitter-examples-only-bit-0.png)
-
-### Et plus encore
-
-N'hésite pas à jouer toi-même avec les propriétés du Splitter pour voir de quoi il est capable.
-
-## Prendre plusieurs bits pour les unifier en un vecteur
-
-On a appris à séparer des vecteurs en plusieurs bits, mais on peut aussi faire le processus inverse et réunir des bits dans un unique vecteur.
-
-Pour cela, on change simplement l'orientation du Splitter (pour des raisons pratiques) et on branche les bits et vecteurs de bits aux "sorties" du Splitter, qui donnera en "entrée" un unique vecteur correspondant à la configuration donnée.
-
-C'est vraiment la même chose que ce qu'on a fait jusqu'à présent, simplement dans l'autre sens.
-
-### Exemple
-
-Ici par exemple, on rassemble 8 bits individuels qu'on reçoit en entrée dans un seul vecteur de bits qu'on donne en sortie :
-
-![L'image d'un Splitter qui rassemble 8 bits dans un seul vecteur devrait s'afficher ici](assets/images/logisim-05-splitter-examples-reversed-process.png)
-
-## Projets Logisim
-
-Le projet Logisim utilisé dans ce tutoriel est téléchargeable via <a href="/assets/logisim/projects/logisim_05_splitters.circ" download="logisim_05_splitters.circ">ce lien</a>.
+Le projet utilisé pour imager ce tutoriel peut être téléchargé via <a href="/assets/logisim/projects/logisim_blocks_use_object_properties.circ" download="logisim_blocks_use_object_properties.circ">ce lien</a>
