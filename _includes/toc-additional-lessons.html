@@ -1,6 +1,6 @@
 {% assign splitprefix = include.prefix | split: "/" %}
 {% assign l = splitprefix[0] %}
-{% for page in site.pages | sort: 'path' %}
+{% for page in site.pages | sort: 'lesson-number' %}
   {% if page.path contains include.prefix %}
     <li
       class="lessons-toc__list-item">
