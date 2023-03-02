@@ -1,11 +1,12 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "02 - Organiser ses câbles (Logisim)"
+title: "Organiser ses câbles (Logisim)"
 description: "Un projet Logisim peut devenir chaotique si on ne fait pas attention"
 toc-anchor-text: "Organiser ses câbles"
 toc-description: "Garde tes projets Logisim propres et lisibles"
 next: "logisim-03"
+lesson-number: 2
 ---
 
 # Organiser ses câbles (Logisim)
