@@ -1,11 +1,10 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Maîtriser les clocks"
+title: "03 - Maîtriser les clocks"
 description: "Les clocks vont vite devenir essentielles à tes circuits, apprends à les maîtriser ici"
 toc-anchor-text: "Maîtriser les clocks"
 toc-description: "Les clocks sont des composants essentiels pour des circuits plus avancés"
-lesson-number: 3
 ---
 
 # Maîtriser les clocks

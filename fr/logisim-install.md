@@ -1,12 +1,10 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Télécharger et installer Logisim"
+title: "04 - Télécharger et installer Logisim"
 description: "Explication détaillée de l'installation de Logisim avec les questions les plus fréquemment posées"
 toc-anchor-text: "Installer Logisim"
 toc-description: "Installation de Logisim et questions/problèmes fréquents"
-next: "logisim-02"
-lesson-number: 4
 ---
 
 # Installer Logisim
