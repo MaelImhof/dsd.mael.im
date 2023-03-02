@@ -3,9 +3,9 @@
 #
 # (in preferred order)
 
-- language-code: en
-  label-regional: English
-  label-english: English
+# - language-code: en
+#   label-regional: English
+#   label-english: English
 
 - language-code: fr
   label-regional: Français
