@@ -31,4 +31,4 @@ C'est-à-dire que si ta clock était activée, elle sera désactivée, et si ell
 
 ## Projet Logisim
 
-Le projet Logisim utilisé dans ce tutoriel (plutôt inutile faut le dire) peut être téléchargé via <a href="/assets/logisim/projects/logisim_clock.circ" download="logisim_clock.circ">ce lien</a>
+Le projet Logisim utilisé dans ce tutoriel (plutôt inutile faut le dire) peut être téléchargé via <a href="/assets/logisim/projects/logisim_clock.circ" download="logisim_clock.circ">ce lien</a>.
