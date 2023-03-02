@@ -11,7 +11,7 @@ toc-description: "Garde tes projets Logisim propres et lisibles"
 
 Durant les TPs de DSD, du moins la première partie du semestre, tu utiliseras Logisim afin de créer et simuler des circuits.
 
-Ces **circuits deviendront progressivement plus complexes**, et il y a quelques petites astuces pour garder des circuits lisibles et compréhensibles d'un coup d'oeil. L'une d'entre elles t'es présentée ici, l'autre, un peu plus avancée, se trouve [plus loin dans les astuces (sous-circuit et modularité)](logisim-08.md).
+Ces **circuits deviendront progressivement plus complexes**, et il y a quelques petites astuces pour garder des circuits lisibles et compréhensibles d'un coup d'oeil. L'une d'entre elles t'es présentée ici, l'autre, un peu plus avancée, se trouve [plus loin dans les astuces (sous-circuit et modularité)](logisim-11.md).
 
 Pour commencer, cela dit, organiser tes câbles correctement devrait suffire.
 

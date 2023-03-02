@@ -87,7 +87,7 @@ On aura l'occasion d'en reparler dans des [tutos qui suivent](logisim-06.md), po
 
 ![L'image du haut de l'arborescence devrait s'afficher ici](./assets/images/logisim-interface-project.png)
 
-`logisim_interface` est ici le titre du projet (donc le nom du fichier où mon projet est sauvegardé). `main` est le nom du circuit que je suis en train de modifier. Dans le [dernier tutoriel](logisim-08.md) de ce site, nous verrons comment créer plusieurs circuits dans un seul projet et en quoi cela est très utile.
+`logisim_interface` est ici le titre du projet (donc le nom du fichier où mon projet est sauvegardé). `main` est le nom du circuit que je suis en train de modifier. Dans le [dernier tutoriel](logisim-11.md) de ce site, nous verrons comment créer plusieurs circuits dans un seul projet et en quoi cela est très utile.
 
 ### 4. Propriétés
 
@@ -103,7 +103,7 @@ Comme de nombreuses applications, Logisim dispose d'un menu en haut à droite qu
 
  - Sauvegarder ton projet/ouvrir un projet existant
  - Accéder aux paramètres (langue, ...)
- - Gérer la simulation de ton circuit ([clocks](logisim-07.md), ...)
+ - Gérer la simulation de ton circuit ([clocks](logisim-08.md), ...)
  - Tester ton circuit sur les GECKOS (FPGA)
  - [Générer des circuits à partir de tables de vérités](logisim-04.md)
 

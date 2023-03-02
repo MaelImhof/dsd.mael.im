@@ -1,48 +1,44 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "L'afficheur 7 segments"
-description: "Un type de sortie un peu différent de la sortie classique"
-toc-anchor-text: "L'afficheur 7 segments"
-toc-description: "Un type de sortie un peu différent de la sortie classique"
+title: "Le DIP-switch"
+description: "Un type d'entrée un peu différent de l'entrée classique"
+toc-anchor-text: "Le DIP-switch"
+toc-description: "Un type d'entrée un peu différent de l'entrée classique"
 ---
 
-# L'afficheur 7 segments
+# Le DIP-switch
 
-L'afficheur 7 segments (*7 segments display* en anglais) est un type de sortie bien particulier qui est utilisé dans certains TPs, voilà pourquoi il est présenté ici en vitesse.
+On a vu les inputs tout simples, à 1 ou plusieurs bits.
 
-## Trouver l'afficheur 7 segments
+![L'image de deux inputs simples à 1 et plusieurs bits devrait s'afficher ici](./assets/images/logisim-dip-switch-basic-inputs.png)
 
-L'afficheur 7 segments se trouve dans le dossier des entrées/sorties, tout comme le DIP-switch qu'on a vu dans le [tutoriel précédent](logisim-08.md).
+Il existe cependant d'autres formes d'inputs utilisables dans Logisim, qu'on peut notamment trouver dans la catégorie `Entrée/Sortie` des différents composants disponibles à gauche de l'interface de Logisim.
 
-## Utiliser l'afficheur 7 segments
+![L'image de différents types d'entrée/sortie devrait s'afficher ici](./assets/images/logisim-dip-switch-inputs-outputs-tab.png)
 
-Un afficheur 7 segments se présente de la manière suivante dans un circuit:
+On va s'intéresser ici tout particulièrement au `DIP-switch`, qui est un type d'**entrée**. On s'attardera dans le tutoriel suivant sur un type de **sortie** spécial : l'[`Afficheur 7 segments` (*Seven segments display* en anglais)](logisim-10.md).
 
-![L'image d'un afficheur 7 segments devrait s'afficher ici](./assets/images/logisim-7-segments-display-what-it-is-like.png)
+## Quel intérêt a le DIP-switch?
 
-Chaque point bleu représente une entrée pour donner du courant à cet afficheur 7 segments. Note que cela s'appelle un afficheur **7** segments, mais qu'il y a **8** bits d'entrée. Cela s'explique par la présence du point en bas à droite de l'afficheur, qui a son propre bit d'entrée.
+En réalité, le DIP-switch est assez simple à comprendre. Il s'agit d'un type d'entrée qui est équivalent à plusieurs inputs simples de 1 bit.
 
-Voici une map de la correspondance entre les bits et les segments:
+Voici à quoi un DIP-switch ressemble :
 
-![L'image du mapping entre entrées et segments devrait s'afficher ici](./assets/images/logisim-7-segments-display-mapping.png)
+![L'image d'un DIP-switch devrait s'afficher ici](./assets/images/logisim-dip-switch-what-it-is-like.png)
 
-Comme tu peux le voir, les segments s'allument lorsque l'entrée correspondante est à 1. Si elle est à 0, ils restent éteints.
+Il s'agit donc d'un système équivalent à 8 inputs de 1 bit chacun (il est possible, bien entendu, de modifier le nombre d'interrupteurs dans les propriétés du DIP-switch).
 
-De nombreuses options sont disponibles dans les propriétés de l'afficheur 7 segments, comme changer la couleur d'allumage des segments, ...
+## Travailler avec un DIP-switch
 
-Cependant il est déconseillé de jouer avec ces propriétés, **particulièrement dans les TPS notés**, puisqu'il s'agit généralement d'éléments qui font partie du modèle de départ du TP et que le professeur a déjà correctement configuré.
+Pour modifier la valeur des entrées, il suffit de se servir du curseur en forme de main pour cliquer sur l'interrupteur qui nous intéresse. La valeur de celui-ci sera modifiée.
 
-> Note : le 1 encadré que tu peux voir sur l'image ci-dessus est un composant appelé une constante. C'est simplement une valeur constante que tu peux fixer à 1 ou 0, c'est plus pratique que de créer une entrée à part entière. Tu peux trouver ce composant de constante dans le dossier câblage.
+## Pourquoi en parler ici?
 
-## Aide-mémoire
+Le DIP-switch n'est pas très intéressant en lui-même, mais il est utilisé par le professeur dans différents modèles qu'on utilise pour commencer un TP.
 
-Il est parfois difficile de se souvenir de quel bit allume quel segment, voici un petit aide-mémoire sous forme d'event:
+Je me suis donc dit que c'était worth it de rajouter une mention d'un DIP-switch, ainsi tu sais à quoi tu à affaire.
 
-![L'image d'aide-mémoire devrait s'afficher ici](./assets/images/logisim-7-segments-display-cheatsheet.png)
+## Projet Logisim
 
-## Documents (in)utiles
-
-Le projet Logisim utilisé dans ce projet peut être téléchargé via <a href="/assets/logisim/projects/logisim_7_segments_display.circ" download="logisim_7_segments_display.circ">ce lien</a>.
-
-L'image d'aide-mémoire peut être téléchargée au format PNG via <a href="./assets/images/logisim-7-segments-display-cheatsheet.png" download="logisim-7-segments-display-cheatsheet.png">ce lien</a> ou <a href="/assets/docs/pdfs/logisim-7-segments-display-cheatsheet.pdf">celui-ci en PDF</a>.
+Le projet (inutile) Logisim utilisé dans ce tutoriel peut être téléchargé via <a href="/assets/logisim/projects/logisim_dip_switch.circ" download="logisim_dip_switch.circ">ce lien</a>.

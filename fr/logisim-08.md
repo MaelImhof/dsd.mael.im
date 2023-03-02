@@ -1,44 +1,34 @@
 ---
 layout: "lesson"
 lang: "fr"
-title: "Le DIP-switch"
-description: "Un type d'entrée un peu différent de l'entrée classique"
-toc-anchor-text: "Le DIP-switch"
-toc-description: "Un type d'entrée un peu différent de l'entrée classique"
+title: "Activer/Désactiver les clocks (Logisim)"
+description: "Envie de paix pour travailler? Désactive les clocks quand tu modifies ton circuit"
+toc-anchor-text: "Activer/Désactiver les clocks"
+toc-description: "Travaille en paix avec les clocks désactivées lorsque tu ne testes pas"
 ---
 
-# Le DIP-switch
+# Activer/Désactiver les clocks (Logisim)
 
-On a vu les inputs tout simples, à 1 ou plusieurs bits.
+Il peut être très agaçant de travailler avec une clock qui est simulée en permanence. On cherche à modifier le circuit, mais la clock continue de fonctionner, ce qui cause des erreurs, un peu comme IntelliJ qui souligne une ligne en rouge alors qu'on n'a pas fini de l'écrire (oui je sais j'ai des problèmes de riche).
 
-![L'image de deux inputs simples à 1 et plusieurs bits devrait s'afficher ici](./assets/images/logisim-dip-switch-basic-inputs.png)
+Il est cependant possible de désactiver la simulation de la clock pendant qu'on travaille sur le circuit. Cela permet aussi d'éviter d'être distrait·e. 
 
-Il existe cependant d'autres formes d'inputs utilisables dans Logisim, qu'on peut notamment trouver dans la catégorie `Entrée/Sortie` des différents composants disponibles à gauche de l'interface de Logisim.
+## Déjà, où qu'on trouve une clock?
 
-![L'image de différents types d'entrée/sortie devrait s'afficher ici](./assets/images/logisim-dip-switch-inputs-outputs-tab.png)
+Les clocks peuvent être ajoutées à ton circuit via la liste de composants moins importants (les dossiers sur le côté gauche de l'interface).
 
-On va s'intéresser ici tout particulièrement au `DIP-switch`, qui est un type d'**entrée**. On s'attardera dans le tutoriel suivant sur un type de **sortie** spécial : l'[`Afficheur 7 segments` (*Seven segments display* en anglais)](logisim-09.md).
+Elle se trouve dans le dossier *Câblage* > *Horloge*.
 
-## Quel intérêt a le DIP-switch?
+![L'image d'où trouver une clock devrait s'afficher ici](./assets/images/logisim-clock-add.png)
 
-En réalité, le DIP-switch est assez simple à comprendre. Il s'agit d'un type d'entrée qui est équivalent à plusieurs inputs simples de 1 bit.
+## Comment qu'on l'active/désactive?
 
-Voici à quoi un DIP-switch ressemble :
+Pour gérer l'activation de la simulation de ta clock, rends-toi dans le menu en haut à gauche de la fenêtre Logisim, `Simulation` > `Tics activés`. En cliquant sur cet élément, tu inverseras l'état d'activation de ta clock.
 
-![L'image d'un DIP-switch devrait s'afficher ici](./assets/images/logisim-dip-switch-what-it-is-like.png)
+C'est-à-dire que si ta clock était activée, elle sera désactivée, et si elle était désactivée, elle fonctionnera à nouveau.
 
-Il s'agit donc d'un système équivalent à 8 inputs de 1 bit chacun (il est possible, bien entendu, de modifier le nombre d'interrupteurs dans les propriétés du DIP-switch).
-
-## Travailler avec un DIP-switch
-
-Pour modifier la valeur des entrées, il suffit de se servir du curseur en forme de main pour cliquer sur l'interrupteur qui nous intéresse. La valeur de celui-ci sera modifiée.
-
-## Pourquoi en parler ici?
-
-Le DIP-switch n'est pas très intéressant en lui-même, mais il est utilisé par le professeur dans différents modèles qu'on utilise pour commencer un TP.
-
-Je me suis donc dit que c'était worth it de rajouter une mention d'un DIP-switch, ainsi tu sais à quoi tu à affaire.
+![L'image de l'élément de menu en question devrait s'afficher ici](./assets/images/logisim-clock-simulating.png)
 
 ## Projet Logisim
 
-Le projet (inutile) Logisim utilisé dans ce tutoriel peut être téléchargé via <a href="/assets/logisim/projects/logisim_dip_switch.circ" download="logisim_dip_switch.circ">ce lien</a>.
+Le projet Logisim utilisé dans ce tutoriel (plutôt inutile faut le dire) peut être téléchargé via <a href="/assets/logisim/projects/logisim_clock.circ" download="logisim_clock.circ">ce lien</a>.
