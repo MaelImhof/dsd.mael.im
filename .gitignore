@@ -1,25 +1,9 @@
-# GENERAL 
-# files types
-.~*
-*.*~
-*.bak
-*.gho
-*.log
-*.ods
-*.ori
-*.swp
-*.swo
-*.tmp
-*.vim
+# Node.js
 
-# directories
-_workfiles
-vendor
+node_modules
+package-lock.json
 
-# SPECIFIC
-# excludes
-.jekyll-cache
-.jekyll-metadata
-.sass-cache
-_site
-package.json
+# VitePress
+
+docs/.vitepress/dist
+docs/.vitepress/cache
