@@ -13,7 +13,7 @@ Le matériel d'installation se trouve dans les [*releases GitHub* de Logisim](ht
 
 Au bas de cette page se trouvent les différents installateurs dépendamment de l'OS hôte :
 
-![`Une image de la liste devrait apparaître ici`](/images/logisim/logisim-installation-installers-list.png)
+![`Une image de la liste devrait apparaître ici`](/logisim/images/logisim-installation-installers-list.png)
 
 - **Windows** : Un des fichiers `.msi` dépendamment de l'architecture
 - **MacOS** : `.dmg`

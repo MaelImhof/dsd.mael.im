@@ -13,7 +13,7 @@ The installation material can be found in [Logisim's GitHub releases](https://gi
 
 At the bottom of the linked page are the different installers, depending on the host OS :
 
-![`An image of the list should appear here`](/images/logisim/logisim-installation-installers-list.png)
+![`An image of the list should appear here`](/logisim/images/logisim-installation-installers-list.png)
 
 - **Windows** : One of the `.msi` files depending on your architecture
 - **MacOS** : `.dmg`
