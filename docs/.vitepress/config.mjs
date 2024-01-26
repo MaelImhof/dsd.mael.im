@@ -6,6 +6,10 @@ export default defineConfig({
   description: "Tips and tricks about Digital System Design at EPFL",
   themeConfig: {
     siteTitle: false,
+    editLink: {
+      pattern: "https://github.com/MaelImhof/dsd.mael.im/edit/main/docs/:path",
+      text: "Edit this page on GitHub"
+    },
     logo: {
       light: '/logo-light.svg',
       dark: '/logo-dark.svg',
@@ -61,6 +65,11 @@ export default defineConfig({
             { text: 'Accueil', link: '/fr/' },
             { text: 'Exemples', link: '/fr/markdown-examples' }
           ],
+
+          editLink: {
+            pattern: "https://github.com/MaelImhof/dsd.mael.im/edit/main/docs/:path",
+            text: "Modifier cette page sur GitHub"
+          },
       
           sidebar: [
             {
@@ -83,7 +92,18 @@ export default defineConfig({
       
           socialLinks: [
             { icon: 'github', link: 'https://github.com/MaelImhof/dsd.mael.im' }
-          ]
+          ],
+
+          docFooter: {
+            prev: "Page précédente",
+            next: "Page suivante"
+          },
+
+          outline: {
+            label: "Sommaire"
+          },
+
+          returnToTopLabel: "Retour en haut"
         }
       }
   },
