@@ -6,9 +6,9 @@ Comme déjà abordé dans un [précédent tutoriel](properties-in-logisim), les 
 
 On peut désirer effectuer une opération avec des bits bien précis de ce vecteur plutôt qu'avec le vecteur entier. **Ce cas de figure revient régulièrement**, c'est pourquoi le **Splitter** est si important.
 
-## Ajouter un Splitter à ton circuit
+## Ajouter un Splitter à son circuit
 
-Le Splitter est un composant additionel se trouvant dans l'[arborescence de composants](general-logisim-ui#3-les-composants-additionnels) vue précédemment dans le dossier nommé `Câblage` et sous le nom `Répartiteur (Splitter)`.
+Le Splitter est un composant additionel se trouvant dans l'[arborescence de composants](general-logisim-ui#3-les-composants-additionnels) vue précédemment, dans le dossier nommé `Câblage` et sous le nom `Répartiteur (Splitter)`.
 
 Pour l'ajouter à un circuit, cliquer dessus pour le sélectionner et cliquer dans le circuit là où il devrait être ajouté.
 
