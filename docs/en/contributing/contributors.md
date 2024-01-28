@@ -28,7 +28,7 @@ layout: page
         <template #lead>
             Thank you to everyone who has contributed to this site!
             <p>
-                This project follows the <a class="all-contributors" href="https://allcontributors.org/docs/en/emoji-key">All Contributors specification</a>
+                This project follows the <a target="_blank" rel="noreferrer" class="all-contributors" href="https://allcontributors.org/docs/en/emoji-key">All Contributors specification</a>
             </p>
         </template>
     </VPTeamPageTitle>
