@@ -52,6 +52,9 @@ const sideBarContributingFR = {
 export default defineConfig({
   title: "DSD.mael.im",
   description: "Tips and tricks about Digital System Design at EPFL",
+  head: [
+    [ 'link', { rel: 'icon', href: '/favicon.svg' } ]
+  ],
   themeConfig: {
     siteTitle: false,
     editLink: {
