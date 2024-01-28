@@ -16,3 +16,11 @@ This website lists a few tips you should know to get the most out of Logisim.
 Tutorials can be found in the menu. It is advisable to start [at the beginning](tips/logisim/download-logisim) and read them from there.
 
 Each tutorial uses a Logisim project to illustrate its subject. The projects and other documents used can be downloaded from the appendix at the bottom of the tutorial page.
+
+## Contribute
+
+Contributions are welcome. Please refer to the [contributing guide](contributing/contributing) for more details.
+
+## Contributors
+
+The list of contributors is available [here](contributing/contributors).
