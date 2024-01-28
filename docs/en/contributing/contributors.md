@@ -15,6 +15,9 @@ layout: page
      * 
      * Please refer to the mentioned file for any changes in the
      * contributors list.
+     * 
+     * This relies on the Build-Time Data Loading feature of VitePress
+     * https://vitepress.dev/guide/data-loading
      */
     import { data as people } from './../../.vitepress/data/contributors.data.js';
 </script>
