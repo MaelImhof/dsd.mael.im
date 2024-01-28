@@ -66,7 +66,34 @@ export default defineConfig({
     nav: [
       { text: 'English', link: '/en/' },
       { text: 'Français', link: '/fr/' },
-    ]
+    ],
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          fr: {
+            translations: {
+              button: {
+                buttonText: "Rechercher",
+                buttonAriaLabel: "Rechercher"
+              },
+              modal: {
+                noResultsText: "Aucun résultat trouvé",
+                resetButtonTitle: "Réinitialiser la recherche",
+                footer: {
+                  closeText: "pour fermer",
+                  closeKeyAriaLabel: "Escape pour fermer",
+                  navigateText: "pour naviguer",
+                  navigateAriaLabel: "{direction} pour naviguer",
+                  selectText: "pour sélectionner",
+                  selectAriaLabel: "{result} pour sélectionner"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   },
   locales: {
       en: {
