@@ -1,10 +1,6 @@
-## Contributors
+# Contributors
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+Please refer to the contributors list on the website :
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+- [English](https://dsd.mael.im/en/contributing/contributors)
+- [Français](https://dsd.mael.im/fr/contributing/contributors)

@@ -1,9 +1,0 @@
-{% assign fpath = page.path | split: "/" | first %}
-{% if fpath == page.lang %}
-{% for l in site.data.languages %}
-{% if l.language-code != page.lang %}
-<link rel="alternate" hreflang="{{l.language-code}}" href="{{page.path | replace_first: page.lang, l.language-code | remove_first: ".md" | absolute_url}}">
-{% endif %}
-{% endfor %}
-{% endif %}
-

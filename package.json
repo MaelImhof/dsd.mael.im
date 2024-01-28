@@ -1,0 +1,18 @@
+{
+  "name": "dsd.mael.im",
+  "version": "1.0.0",
+  "description": "Tips and tricks for the DSD course at EPFL",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.40",
+    "vue": "^3.4.15"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
