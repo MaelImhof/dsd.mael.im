@@ -1,24 +1,18 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
-
-hero:
-  name: "DSD.mael.im"
-  text: "Astuces pour DSD"
-  tagline: "Pratiques pour les projets, peu mentionnées en cours"
-  actions:
-    - theme: brand
-      text: Commencer avec Logisim
-      link: /fr/tips/logisim/
-    - theme: alt
-      text: Astuces Modelsim
-      link: /fr/tips/modelsim/
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+next: false
 ---
+
+# DSD.mael.im
+
+Bienvenue !
+
+Ce site répertorie quelques astuces qu'il est bon de connaître pour bien appréhender Logisim.
+
+> [!CAUTION]
+> Les astuces et tutoriels ont été écrits avant la réforme, le cours de DSD a été repensé depuis. Même si les astuces peuvent encore être utiles, elles ne remplacent de loin pas le cours.
+
+## Tutoriels
+
+Les tutoriels peuvent être trouvés dans le menu. Il est conseillé de commencer [au début](tips/logisim/download-logisim) et de les lire à la suite.
+
+Chaque tutoriel utilise un projet Logisim pour illustrer le sujet abordé. Les projets et autres documents utilisés peuvent être téléchargés dans l'appendice au bas de la page du tutoriel.
