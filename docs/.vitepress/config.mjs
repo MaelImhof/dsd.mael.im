@@ -95,6 +95,11 @@ export default defineConfig({
       }
     }
   },
+  sitemap: {
+    hostname: 'https://dsd.mael.im',
+    xslUrl: '/sitemap.xsl',
+    lastmodDateOnly: false
+  },
   locales: {
       en: {
         label: "English",
